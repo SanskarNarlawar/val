@@ -147,6 +147,11 @@ noBtn.addEventListener('click', (e) => {
 yesBtn.addEventListener('click', () => {
     celebration.classList.add('active');
     createConfetti();
+    // Hide the main card so it doesn't show behind the celebration screen
+    const container = document.querySelector('.container');
+    if (container) {
+        container.style.display = 'none';
+    }
 });
 
 function createConfetti() {
